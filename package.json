@@ -2,9 +2,13 @@
   "name": "mht-viewer",
   "displayName": "MHT Viewer",
   "description": "PSR (psr.exe) で採取したログ ファイル (.mht / .mhtml) を表示する VS Code 拡張機能",
-  "version": "0.1.0",
-  "publisher": "midoliy",
+  "version": "0.0.1",
+  "publisher": "tmidorikawa",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tatsuya-midorikawa/mht-viewer.git"
+  },
   "engines": {
     "vscode": "^1.74.0"
   },
