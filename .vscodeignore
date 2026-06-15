@@ -5,4 +5,5 @@
 samples/**
 **/*.map
 PUBLISHING.md
+DETAILS.md
 **/*.vsix
