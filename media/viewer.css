@@ -1,0 +1,138 @@
+:root {
+  color-scheme: light dark;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--vscode-font-family, sans-serif);
+  font-size: var(--vscode-font-size, 13px);
+  color: var(--vscode-foreground);
+  background-color: var(--vscode-editor-background);
+}
+
+/* ツールバー -------------------------------------------------------------- */
+
+#toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex: 0 0 auto;
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--vscode-panel-border, rgba(128, 128, 128, 0.35));
+  background-color: var(--vscode-editorWidget-background, var(--vscode-editor-background));
+  white-space: nowrap;
+}
+
+#toolbar[hidden] {
+  display: none;
+}
+
+#toolbar .meta {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  min-width: 0;
+}
+
+#toolbar .subject {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#toolbar .date {
+  opacity: 0.75;
+  font-size: 0.9em;
+}
+
+#toolbar .actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+
+#toolbar .count {
+  opacity: 0.75;
+  font-size: 0.9em;
+}
+
+#toolbar button {
+  font-family: inherit;
+  font-size: 0.9em;
+  color: var(--vscode-button-secondaryForeground, var(--vscode-button-foreground));
+  background-color: var(--vscode-button-secondaryBackground, var(--vscode-button-background));
+  border: none;
+  padding: 3px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#toolbar button:hover {
+  background-color: var(--vscode-button-secondaryHoverBackground, var(--vscode-button-hoverBackground));
+}
+
+#toolbar button:focus-visible {
+  outline: 1px solid var(--vscode-focusBorder);
+  outline-offset: 2px;
+}
+
+/* 本体 ------------------------------------------------------------------- */
+
+#content {
+  flex: 1 1 auto;
+  width: 100%;
+  border: none;
+  background-color: #ffffff;
+}
+
+#content[hidden] {
+  display: none;
+}
+
+/* ステータス / エラー ----------------------------------------------------- */
+
+.status {
+  flex: 0 0 auto;
+  padding: 16px 20px;
+  opacity: 0.85;
+}
+
+.status[hidden] {
+  display: none;
+}
+
+.status.error {
+  color: var(--vscode-errorForeground, #f48771);
+  opacity: 1;
+  white-space: pre-wrap;
+}
+
+/* ソース表示 -------------------------------------------------------------- */
+
+.source {
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 12px 16px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-family: var(--vscode-editor-font-family, monospace);
+  font-size: var(--vscode-editor-font-size, 12px);
+  color: var(--vscode-editor-foreground);
+  background-color: var(--vscode-editor-background);
+}
+
+.source[hidden] {
+  display: none;
+}

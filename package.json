@@ -1,0 +1,41 @@
+{
+  "name": "mht-viewer",
+  "displayName": "MHT Viewer",
+  "description": "PSR (psr.exe) で採取したログ ファイル (.mht / .mhtml) を表示する VS Code 拡張機能",
+  "version": "0.1.0",
+  "publisher": "midoliy",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "keywords": [
+    "mht",
+    "mhtml",
+    "psr",
+    "Steps Recorder",
+    "viewer"
+  ],
+  "main": "./src/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "mhtViewer.preview",
+        "displayName": "MHT Viewer",
+        "selector": [
+          {
+            "filenamePattern": "*.mht"
+          },
+          {
+            "filenamePattern": "*.mhtml"
+          }
+        ],
+        "priority": "default"
+      }
+    ]
+  }
+}
